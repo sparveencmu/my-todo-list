@@ -7,6 +7,10 @@
   Step 3: Start the development server  
           npm start  
   Step 4: Build and deploy your app  
-          npm run build  
+          npm run build
+
+# Why we need nanoid
+Each time we pass the props item in a component, it generates a child element. 
+React needs a unique key to uniquely distinguish these child elements.
 
 
