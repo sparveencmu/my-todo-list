@@ -17,9 +17,13 @@ const Input = () => {
   const [inputData, setInputData] = useState("");
 
   const onSubmitHandler = (event) => {
+    // Each time the user presses “Enter” on their keyboard, the page refreshes, 
+    // and the state is lost. We pass the event.preventDefault() method to prevent that.
     event.preventDefault();
     if (inputData.trim().length <= 0) return;
     setInputData("");
+    // When the state updates, the entire state is overwritten. If we want to save the old 
+    // values of the array and add the new values to the ToDoList array, we can use the JavaScript spread operator. 
     setToDoList((prevValue) => [
       ...prevValue,
       { toDo: inputData, id: nanoid() }
